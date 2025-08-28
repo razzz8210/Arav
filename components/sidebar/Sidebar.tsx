@@ -212,6 +212,7 @@ const Sidebar: React.FC<{
         <div
           className={`flex items-center p-2 rounded ${isExpanded ? "justify-center" : ""
             }`}
+          data-tour="sidebar-menu"
         >
           {isExpanded ? (
             <div className="">
@@ -245,6 +246,7 @@ const Sidebar: React.FC<{
                 onClick={handleDevelopment}
                 className={`flex items-center w-full cursor-pointer p-2 rounded-lg hover:bg-[#f1f1f1] ${isExpanded ? "p-2" : "p-3"
                   }`}
+                data-tour="settings-menu"
               >
                 <CalendarDays className="w-5 h-5" />
                 {isExpanded && <span className="ml-4">Schedule</span>}
@@ -257,6 +259,7 @@ const Sidebar: React.FC<{
               onClick={handleProjectsOpen}
               className={`flex items-center justify-between w-full cursor-pointer ${isExpanded ? "p-2" : "p-3"
                 } rounded-lg hover:bg-[#f1f1f1]`}
+              data-tour="chat-history"
             >
               <div
                 className="flex items-center"

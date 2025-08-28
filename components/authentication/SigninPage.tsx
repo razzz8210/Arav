@@ -56,10 +56,14 @@ export function SigninPage() {
       if (data.success && data.user) {
         updateUser(data.user);
         toast.success("Logged in successfully!");
+        
+        // Small delay to ensure the tour can start after navigation
         setTimeout(() => {
+          
+          // Small delay to ensure the tour can start after navigation
           window.location.href = "/";
-        }, 1000);
-      } else {
+        }, 1500);
+          }, 2500);
         toast.error(data.message || "Login failed");
       }
     } catch (err) {

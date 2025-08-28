@@ -7,6 +7,7 @@ import { useEffect, useState, useRef } from "react";
 import { useAuth } from "@/utils/AuthContext";
 import { Menu } from "@/components/sidebar/Menu";
 import { AuthDebug } from "@/components/AuthDebug";
+import TourGuide, { TourGuideRef } from "@/components/TourGuide";
 
 const Page = () => {
   const [mounted, setMounted] = useState(false);

@@ -47,7 +47,7 @@ export const AuthenticatedMenu: React.FC<AuthenticatedMenuProps> = ({
   if (!user) return null;
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative" ref={dropdownRef} data-tour="profile-menu">
       <div
         className="flex justify-center items-center py-1 px-2 border border-transparent gap-4 cursor-pointer rounded-lg transition-colors hover:bg-[#f1f1f1]"
         onClick={() => setShowDropdown(!showDropdown)}

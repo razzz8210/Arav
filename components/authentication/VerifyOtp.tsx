@@ -46,9 +46,11 @@ export const VerifyOtp = ({ formData }: VerifyOtpProps) => {
       if (data.success && data.user) {
         updateUser(data.user);
         toast.success("Account created successfully! Redirecting...");
+        
+        // Small delay to ensure the tour can start after navigation
         setTimeout(() => {
           router.push("/");
-        }, 1500);
+        }, 2000);
       } else {
         toast.error(data.message || "OTP verification failed");
       }

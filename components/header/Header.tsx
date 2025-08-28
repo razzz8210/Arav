@@ -5,9 +5,10 @@ import { useAuth } from "@/utils/AuthContext";
 import { AuthenticatedMenu } from "@/components/sidebar/AuthenticatedMenu";
 import { HelpCircle } from "lucide-react";
 import { TourGuideRef } from "@/components/TourGuide";
+import { TourGuideRef } from "@/components/TourGuide";
 
 interface HeaderProps {
-  tourRef?: React.RefObject<TourGuideRef | null>;
+  tourRef?: React.RefObject<TourGuideRef>;
 }
 
 export const Header: React.FC<HeaderProps> = ({ tourRef }) => {
@@ -19,7 +20,7 @@ export const Header: React.FC<HeaderProps> = ({ tourRef }) => {
   }, []);
 
   const handleStartTour = () => {
-    if (tourRef?.current && authenticated) {
+    if (tourRef?.current) {
       tourRef.current.startTour();
     }
   };
