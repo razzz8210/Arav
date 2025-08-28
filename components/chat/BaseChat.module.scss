@@ -1,0 +1,84 @@
+.BaseChat {
+  font-family: 'Manrope', sans-serif;
+  display: flex;
+  height: 100vh;
+
+  &[data-chat-visible='false'] {
+    --workbench-inner-width: 100%;
+    --workbench-left: 0;
+
+    .Chat {
+      --at-apply: bolt-ease-cubic-bezier;
+      transition-property: transform, opacity;
+      transition-duration: 0.3s;
+      will-change: transform, opacity;
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+  }
+}
+
+.Chat {
+  opacity: 1;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+}
+
+/* Add no-scrollbar utility */
+.Chat::-webkit-scrollbar {
+  display: none;
+}
+
+.Chat {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.PromptEffectContainer {
+  --prompt-container-offset: 50px;
+  --prompt-line-stroke-width: 1px;
+  position: absolute;
+  pointer-events: none;
+  inset: calc(var(--prompt-container-offset) / -2);
+  width: calc(100% + var(--prompt-container-offset));
+  height: calc(100% + var(--prompt-container-offset));
+}
+
+.PromptEffectLine {
+  width: calc(100% - var(--prompt-container-offset) + var(--prompt-line-stroke-width));
+  height: calc(100% - var(--prompt-container-offset) + var(--prompt-line-stroke-width));
+  x: calc(var(--prompt-container-offset) / 2 - var(--prompt-line-stroke-width) / 2);
+  y: calc(var(--prompt-container-offset) / 2 - var(--prompt-line-stroke-width) / 2);
+  rx: calc(8px - var(--prompt-line-stroke-width));
+  fill: transparent;
+  stroke-width: var(--prompt-line-stroke-width);
+  stroke: url(#line-gradient);
+  stroke-dasharray: 35px 65px;
+  stroke-dashoffset: 10;
+}
+
+.PromptShine {
+  fill: url(#shine-gradient);
+  mix-blend-mode: overlay;
+}
+
+/* Floating animation for jellyfish */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-5px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-25px) translateX(8px) rotate(1deg);
+  }
+}
+
+:global(.animate-float) {
+  animation: float 8s ease-in-out infinite;
+}

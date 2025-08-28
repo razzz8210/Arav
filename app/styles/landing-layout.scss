@@ -1,0 +1,75 @@
+.landing-page-layout {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #0a0a0a 0%,
+    #1a0a2a 15%,
+    #2a1a3a 30%,
+    #1a1a2e 45%,
+    #16213e 60%,
+    #0c1440 75%,
+    #0a1a6c 90%,
+    #1b103d 100%
+  );
+  background-attachment: fixed;
+  background-size: 400% 400%;
+  animation: cosmicGlow 20s ease infinite;
+  position: relative;
+  overflow-x: hidden;
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 10% 20%, rgba(120, 119, 198, 0.4) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(0, 242, 254, 0.2) 0%, transparent 50%),
+      radial-gradient(circle at 90% 10%, rgba(102, 126, 234, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 20% 90%, rgba(138, 43, 226, 0.2) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+    animation: cosmicMove 30s ease infinite;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@keyframes cosmicGlow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+// Global text color consistency
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff !important;
+}
+
+p {
+  color: #a0a0b3 !important;
+}
+
+// Ensure all sections blend seamlessly
+.community-section,
+.features1-section,
+.features-section,
+.reviews-section,
+.earn-section {
+  background: transparent !important;
+}

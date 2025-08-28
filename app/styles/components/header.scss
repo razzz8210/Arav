@@ -1,0 +1,108 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: var(--header-height);
+  transition: all 0.3s ease;
+  z-index: 1;
+
+  @media (max-width: 640px) {
+    padding: 8px 10px;
+  }
+
+  &__logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: var(--z-logo);
+    color: var(--bolt-elements-textPrimary);
+    cursor: pointer;
+  }
+
+  &__sidebar-icon {
+    font-size: 1.25rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  &__logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__auth-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 32px;
+    font-family: "Segoe UI", ui-sans-serif, system-ui;
+
+    @media (max-width: 640px) {
+      padding: 0 2px;
+    }
+  }
+
+  &__login-btn {
+    padding: 6px 24px;
+    font-size: 0.875rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: black;
+    background: black;
+    color: white;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__light {
+    background: transparent;
+    color: black;
+    border-color: rgba(0, 0, 0, 0.4);
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  &__signup-btn {
+    padding: 6px 24px;
+    font-size: 0.875rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    background: linear-gradient(to right, #a855f7, #3b82f6);
+    color: white;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 640px) {
+      padding: 6px 15px;
+    }
+  }
+
+  &__chat-title {
+    flex: 1;
+    padding: 0 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    color: var(--bolt-elements-textPrimary);
+    font-weight: 500;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+}

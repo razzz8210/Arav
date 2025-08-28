@@ -1,0 +1,312 @@
+/* Main Container */
+.communityVideos {
+  position: relative;
+  overflow: visible;
+  max-width: 100%;
+  padding: 20px 20px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1280px;
+  max-height: 1356px;
+  margin: 0 auto;
+  padding: 40px 40px;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+.title {
+  font-family: Manrope;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 2rem auto 0.5rem;
+}
+
+/* Description */
+.description {
+  width: 635px;
+  height: 48px;
+  margin-bottom: 5px;
+  font-family: Manrope;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Carousel */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+/* Marquee */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marqueeContent {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+  gap: 20px;
+}
+
+.marqueeContent:hover {
+  animation-play-state: paused;
+}
+
+/* Community Card */
+.communityCard {
+  flex: 0 0 auto;
+  width: 320px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.communityCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Container */
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+/* Image */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.communityCard:hover .overlay {
+  opacity: 1;
+}
+
+/* Play Button */
+.playButton {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.playButton:hover {
+  transform: scale(1.1);
+}
+
+/* Content */
+.content {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Author */
+.author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Avatar */
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Author Name */
+.authorName {
+  color: #ffffff;
+  font-family: Manrope;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Post Type */
+.postType {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-family: Manrope;
+  font-weight: 500;
+  font-size: 12px;
+  color: white;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Animations */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .communityVideos {
+    padding: 40px 30px;
+  }
+
+  .container {
+    padding: 30px 40px;
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .communityVideos {
+    padding: 20px 16px;
+    min-height: auto;
+  }
+
+  .container {
+    padding: 20px 24px;
+    border-radius: 20px;
+    max-height: none;
+  }
+
+  .title {
+    font-size: 38px;
+    line-height: 40px;
+  }
+
+  .description {
+    margin-bottom: 40px;
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .carousel {
+    margin-top: 30px;
+  }
+
+  .communityCard {
+    width: 280px;
+  }
+
+  .imageContainer {
+    height: 160px;
+  }
+
+  .content {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 38px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .communityVideos {
+    padding: 16px 12px;
+    margin: 2.5rem auto 2.5rem;
+  }
+
+  .container {
+    padding: 16px 20px;
+    border-radius: 16px;
+  }
+
+  .description {
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+  }
+
+  .communityCard {
+    width: 240px;
+  }
+
+  .imageContainer {
+    height: 160px;
+  }
+
+  .playButton {
+    width: 50px;
+    height: 50px;
+  }
+
+  .content {
+    padding: 12px;
+  }
+
+  .avatar {
+    width: 28px;
+    height: 28px;
+  }
+
+  .authorName {
+    font-size: 12px;
+  }
+
+  .postType {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+}

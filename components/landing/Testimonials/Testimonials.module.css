@@ -1,0 +1,183 @@
+/* Main Section */
+.testimonials {
+  padding: 96px 16px;
+  background-color: #f9fafb;
+}
+
+/* Container */
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  margin-bottom: 64px;
+}
+
+/* Title */
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+/* Accent Text */
+.accentBlack {
+  color: black;
+}
+
+.accentPurple {
+  color: #9333ea;
+}
+
+/* Carousel Container */
+.carouselContainer {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* Star Rating */
+.starRating {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+/* Star */
+.star {
+  width: 16px;
+  height: 16px;
+}
+
+.starActive {
+  opacity: 1;
+}
+
+.starInactive {
+  opacity: 0.3;
+  filter: grayscale(100%);
+}
+
+/* Navigation Container */
+.navigationContainer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+/* Navigation Button */
+.navigationButton {
+  position: static;
+  transform: none;
+  background-color: white;
+  border-color: #e5e7eb;
+  color: #4b5563;
+}
+
+.navigationButton:hover {
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonials {
+    padding: 80px 16px;
+  }
+
+  .header {
+    margin-bottom: 48px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 64px 12px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+  }
+
+  .carouselContainer {
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials {
+    padding: 48px 8px;
+  }
+
+  .header {
+    margin-bottom: 32px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .carouselContainer {
+    padding: 0 4px;
+  }
+
+  .starRating {
+    gap: 3px;
+    margin-bottom: 12px;
+  }
+
+  .star {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    padding: 40px 6px;
+  }
+
+  .header {
+    margin-bottom: 28px;
+  }
+
+  .title {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+
+  .carouselContainer {
+    padding: 0 2px;
+  }
+
+  .starRating {
+    gap: 2px;
+    margin-bottom: 10px;
+  }
+
+  .star {
+    width: 12px;
+    height: 12px;
+  }
+}

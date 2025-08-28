@@ -1,0 +1,206 @@
+/* Main Container */
+.heroFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 16px;
+  background-color: white;
+}
+
+/* Main Title */
+.mainTitle {
+  font-size: 2.25rem;
+  font-family: mplusrounded, sans-serif;
+  font-weight: 800;
+  color: black;
+  line-height: 1.25;
+}
+
+@media (min-width: 640px) {
+  .mainTitle {
+    font-size: 3rem;
+  }
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.875rem;
+  font-family: mplusrounded, sans-serif;
+  font-weight: 800;
+  color: black;
+  margin-top: 8px;
+}
+
+@media (min-width: 640px) {
+  .subtitle {
+    font-size: 3rem;
+  }
+}
+
+/* Accent Text - Blue */
+.accentBlue {
+  color: #4160ee;
+}
+
+/* Accent Text - Gradient */
+.accentGradient {
+  background: linear-gradient(to right, #625cf0, #3762ed);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: mplusrounded, sans-serif;
+}
+
+/* Description */
+.description {
+  color: #6b7280;
+  font-family: opensans, sans-serif;
+  max-width: 42rem;
+  margin-top: 24px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+  .description {
+    font-size: 1.125rem;
+  }
+}
+
+/* Button */
+.button {
+  margin-top: 32px;
+  padding: 12px 24px;
+  width: 278px;
+  height: 44px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+  background: linear-gradient(to right, #a855f7, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .heroFooter {
+    padding: 64px 16px;
+  }
+
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 2.25rem;
+  }
+
+  .description {
+    max-width: 36rem;
+    margin-top: 20px;
+  }
+
+  .button {
+    margin-top: 28px;
+    width: 250px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroFooter {
+    padding: 48px 12px;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.75rem;
+    margin-top: 6px;
+  }
+
+  .description {
+    max-width: 32rem;
+    margin-top: 18px;
+    font-size: 0.95rem;
+  }
+
+  .button {
+    margin-top: 24px;
+    width: 220px;
+    height: 38px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroFooter {
+    padding: 40px 8px;
+  }
+
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    margin-top: 4px;
+  }
+
+  .description {
+    max-width: 28rem;
+    margin-top: 16px;
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  .button {
+    margin-top: 20px;
+    width: 200px;
+    height: 36px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroFooter {
+    padding: 32px 6px;
+  }
+
+  .mainTitle {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    margin-top: 3px;
+  }
+
+  .description {
+    max-width: 24rem;
+    margin-top: 14px;
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
+  }
+
+  .button {
+    margin-top: 18px;
+    width: 180px;
+    height: 34px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+}

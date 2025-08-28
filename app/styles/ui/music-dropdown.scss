@@ -1,0 +1,129 @@
+.music-dropdown {
+  position: relative;
+  display: inline-block;
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border: 1px solid #000000;
+    border-radius: 0.5rem;
+    background: #dcdcdc;
+    color: #000000;
+    font-size: 0.875rem;
+    cursor: pointer;
+    min-width: 140px;
+    text-align: left;
+
+    &:focus {
+      outline: none;
+      border-color: #000000;
+    }
+
+    &:hover {
+      border-color: #000000;
+    }
+
+    span {
+      color: #000000;
+    }
+  }
+
+  &__icon {
+    color: #666666;
+    margin-left: 0.5rem;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 0.25rem;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  &__menu--up {
+    top: auto;
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &__option {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border: none;
+    color: #000000;
+    font-size: 0.875rem;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      background: #f8f9fa;
+    }
+
+    &--selected {
+      background: #8b5cf6;
+      color: white;
+
+      &:hover {
+        background: #7c3aed;
+      }
+    }
+
+    &:first-child {
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+    }
+  }
+
+  &__trigger:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  &__loader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666666;
+  }
+
+  &__spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #e5e7eb;
+    border-top: 2px solid #666666;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
